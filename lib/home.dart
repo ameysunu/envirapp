@@ -326,38 +326,49 @@ class _HomeState extends State<Home> {
                   ),
                 ),
                 margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-                child: Column(
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.fromLTRB(20, 20, 20, 5),
-                      child: SizedBox(
-                        width: double.infinity,
-                        height: 100,
-                        child: Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: <Widget>[
-                            Text(
-                              'Donate',
-                              style: TextStyle(
-                                  fontFamily: 'OpenSans',
-                                  fontSize: 25.0,
-                                  color: Hexcolor('#FFFFFF')),
-                            ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
-                              child: Text(
-                                'Be a hero and donate to our sinking planet.\nEven a single dollar can make a difference!',
+                child: InkWell(
+                  child: Column(
+                    children: <Widget>[
+                      Padding(
+                        padding: EdgeInsets.fromLTRB(20, 20, 20, 5),
+                        child: SizedBox(
+                          width: double.infinity,
+                          height: 100,
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: <Widget>[
+                              Text(
+                                'Donate',
                                 style: TextStyle(
                                     fontFamily: 'OpenSans',
-                                    fontSize: 15.0,
+                                    fontSize: 25.0,
                                     color: Hexcolor('#FFFFFF')),
                               ),
-                            ),
-                          ],
+                              Padding(
+                                padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                                child: Text(
+                                  'Be a hero and donate to our sinking planet.\nEven a single dollar can make a difference!',
+                                  style: TextStyle(
+                                      fontFamily: 'OpenSans',
+                                      fontSize: 15.0,
+                                      color: Hexcolor('#FFFFFF')),
+                                ),
+                              ),
+                            ],
+                          ),
                         ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
+                  onTap: () async {
+                    const url =
+                        'https://www.adaptation-fund.org/ie/united-nations-environment-programme-unep/';
+                    if (await canLaunch(url)) {
+                      await launch(url);
+                    } else {
+                      throw 'Could not launch $url';
+                    }
+                  },
                 ),
               ),
             ],
