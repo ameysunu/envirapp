@@ -142,7 +142,28 @@ class _HomeState extends State<Home> {
                         ),
                         margin: EdgeInsets.symmetric(
                             vertical: 10.0, horizontal: 10.0),
-                        child: Center(child: Text("hello")),
+                        child: Center(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                height: 50,
+                                width: 50,
+                                child: Image.asset("images/animals.png"),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  "Animals",
+                                  style: TextStyle(
+                                      fontFamily: 'OpenSans',
+                                      color: Hexcolor('#21697A')),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ),
                     Container(
@@ -158,7 +179,28 @@ class _HomeState extends State<Home> {
                         ),
                         margin: EdgeInsets.symmetric(
                             vertical: 10.0, horizontal: 10.0),
-                        child: Center(child: Text("hello")),
+                        child: Center(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                height: 50,
+                                width: 50,
+                                child: Image.asset("images/earth.png"),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  "Earth",
+                                  style: TextStyle(
+                                      fontFamily: 'OpenSans',
+                                      color: Hexcolor('#21697A')),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ),
                     Container(
@@ -174,7 +216,28 @@ class _HomeState extends State<Home> {
                         ),
                         margin: EdgeInsets.symmetric(
                             vertical: 10.0, horizontal: 10.0),
-                        child: Center(child: Text("hello")),
+                        child: Center(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                height: 50,
+                                width: 50,
+                                child: Image.asset("images/energy.png"),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  "Energy",
+                                  style: TextStyle(
+                                      fontFamily: 'OpenSans',
+                                      color: Hexcolor('#21697A')),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ),
                     Container(
@@ -190,7 +253,28 @@ class _HomeState extends State<Home> {
                         ),
                         margin: EdgeInsets.symmetric(
                             vertical: 10.0, horizontal: 10.0),
-                        child: Center(child: Text("hello")),
+                        child: Center(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                height: 50,
+                                width: 50,
+                                child: Image.asset("images/fossils.png"),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  "Fossils",
+                                  style: TextStyle(
+                                      fontFamily: 'OpenSans',
+                                      color: Hexcolor('#21697A')),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ),
                     Container(
@@ -206,7 +290,28 @@ class _HomeState extends State<Home> {
                         ),
                         margin: EdgeInsets.symmetric(
                             vertical: 10.0, horizontal: 10.0),
-                        child: Center(child: Text("hello")),
+                        child: Center(
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Container(
+                                height: 50,
+                                width: 50,
+                                child: Image.asset("images/water.png"),
+                              ),
+                              Padding(
+                                padding: const EdgeInsets.all(8.0),
+                                child: Text(
+                                  "Water",
+                                  style: TextStyle(
+                                      fontFamily: 'OpenSans',
+                                      color: Hexcolor('#21697A')),
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
                     ),
                   ],
