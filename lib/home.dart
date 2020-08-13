@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -7,6 +8,15 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
+  _launchURL(String toMailId) async {
+    var url = 'mailto:$toMailId';
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw 'Could not launch $url';
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -84,7 +94,7 @@ class _HomeState extends State<Home> {
                       Padding(
                         padding: EdgeInsets.fromLTRB(20, 10, 0, 0),
                         child: Text(
-                          'Give us a call to know more.',
+                          'Send us a mail to know more.',
                           style: TextStyle(
                               fontFamily: 'OpenSans',
                               fontSize: 17.0,
@@ -97,13 +107,15 @@ class _HomeState extends State<Home> {
                           children: <Widget>[
                             RaisedButton(
                               color: Hexcolor('#0094AC'),
-                              onPressed: () {},
+                              onPressed: () {
+                                _launchURL('inquiry@unep.org');
+                              },
                               shape: StadiumBorder(),
-                              child: Text('Call UNEP helpline',
+                              child: Text('Mail UNEP helpline',
                                   style: TextStyle(
                                       fontFamily: 'OpenSans',
                                       fontSize: 20,
-                                      color: Colors.white)),
+                                      color: Hexcolor('#FFFFFF'))),
                             ),
                           ],
                         ),
