@@ -317,6 +317,49 @@ class _HomeState extends State<Home> {
                   ],
                 ),
               ),
+              Card(
+                color: Hexcolor('#FB9039'),
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.vertical(
+                    top: Radius.circular(25.0),
+                    bottom: Radius.circular(25.0),
+                  ),
+                ),
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                child: Column(
+                  children: <Widget>[
+                    Padding(
+                      padding: EdgeInsets.fromLTRB(20, 20, 20, 5),
+                      child: SizedBox(
+                        width: double.infinity,
+                        height: 100,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Text(
+                              'Donate',
+                              style: TextStyle(
+                                  fontFamily: 'OpenSans',
+                                  fontSize: 25.0,
+                                  color: Hexcolor('#FFFFFF')),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                              child: Text(
+                                'Be a hero and donate to our sinking planet. Even a single dollar can make a difference!',
+                                style: TextStyle(
+                                    fontFamily: 'OpenSans',
+                                    fontSize: 15.0,
+                                    color: Hexcolor('#FFFFFF')),
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
+              ),
             ],
           ),
         ),
