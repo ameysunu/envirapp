@@ -1,4 +1,4 @@
-# hackillnois
+# Envirapp
 
 A new Flutter project.
 
