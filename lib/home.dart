@@ -343,15 +343,29 @@ class _HomeState extends State<Home> {
                                   fontSize: 25.0,
                                   color: Hexcolor('#FFFFFF')),
                             ),
-                            Padding(
-                              padding: const EdgeInsets.fromLTRB(0, 5, 0, 0),
-                              child: Text(
-                                'Be a hero and donate to our sinking planet. Even a single dollar can make a difference!',
-                                style: TextStyle(
-                                    fontFamily: 'OpenSans',
-                                    fontSize: 15.0,
-                                    color: Hexcolor('#FFFFFF')),
-                              ),
+                            Row(
+                              children: <Widget>[
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                                  child: Text(
+                                    'Be a hero and donate to our sinking planet.\nEven a single dollar can make a difference!',
+                                    style: TextStyle(
+                                        fontFamily: 'OpenSans',
+                                        fontSize: 15.0,
+                                        color: Hexcolor('#FFFFFF')),
+                                  ),
+                                ),
+                                Padding(
+                                  padding:
+                                      const EdgeInsets.fromLTRB(5, 0, 0, 0),
+                                  child: Icon(
+                                    Icons.monetization_on,
+                                    size: 32,
+                                    color: Colors.white,
+                                  ),
+                                ),
+                              ],
                             ),
                           ],
                         ),
