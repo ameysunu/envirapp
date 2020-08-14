@@ -2,5 +2,5 @@ import 'package:flutter/material.dart';
 import 'home.dart';
 
 void main() {
-  runApp(Home());
+  runApp(MaterialApp(debugShowCheckedModeBanner: false, home: Home()));
 }
