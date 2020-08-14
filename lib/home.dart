@@ -2,6 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'animals.dart';
+import 'earth.dart';
+import 'energy.dart';
+import 'fossils.dart';
+import 'water.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -176,148 +180,172 @@ class _HomeState extends State<Home> {
                     Container(
                       height: 150,
                       width: 150,
-                      child: Card(
-                        color: Hexcolor('#B2EC80'),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.vertical(
-                            top: Radius.circular(10.0),
-                            bottom: Radius.circular(10.0),
+                      child: InkWell(
+                        child: Card(
+                          color: Hexcolor('#B2EC80'),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(10.0),
+                              bottom: Radius.circular(10.0),
+                            ),
+                          ),
+                          margin: EdgeInsets.symmetric(
+                              vertical: 10.0, horizontal: 10.0),
+                          child: Center(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Container(
+                                  height: 50,
+                                  width: 50,
+                                  child: Image.asset("images/earth.png"),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    "Earth",
+                                    style: TextStyle(
+                                        fontFamily: 'OpenSans',
+                                        color: Hexcolor('#21697A')),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
-                        margin: EdgeInsets.symmetric(
-                            vertical: 10.0, horizontal: 10.0),
-                        child: Center(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Container(
-                                height: 50,
-                                width: 50,
-                                child: Image.asset("images/earth.png"),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  "Earth",
-                                  style: TextStyle(
-                                      fontFamily: 'OpenSans',
-                                      color: Hexcolor('#21697A')),
-                                ),
-                              ),
-                            ],
-                          ),
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Earth()),
                         ),
                       ),
                     ),
                     Container(
                       height: 150,
                       width: 150,
-                      child: Card(
-                        color: Hexcolor('#B2EC80'),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.vertical(
-                            top: Radius.circular(10.0),
-                            bottom: Radius.circular(10.0),
+                      child: InkWell(
+                        child: Card(
+                          color: Hexcolor('#B2EC80'),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(10.0),
+                              bottom: Radius.circular(10.0),
+                            ),
+                          ),
+                          margin: EdgeInsets.symmetric(
+                              vertical: 10.0, horizontal: 10.0),
+                          child: Center(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Container(
+                                  height: 50,
+                                  width: 50,
+                                  child: Image.asset("images/energy.png"),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    "Energy",
+                                    style: TextStyle(
+                                        fontFamily: 'OpenSans',
+                                        color: Hexcolor('#21697A')),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
-                        margin: EdgeInsets.symmetric(
-                            vertical: 10.0, horizontal: 10.0),
-                        child: Center(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Container(
-                                height: 50,
-                                width: 50,
-                                child: Image.asset("images/energy.png"),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  "Energy",
-                                  style: TextStyle(
-                                      fontFamily: 'OpenSans',
-                                      color: Hexcolor('#21697A')),
-                                ),
-                              ),
-                            ],
-                          ),
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Energy()),
                         ),
                       ),
                     ),
                     Container(
                       height: 150,
                       width: 150,
-                      child: Card(
-                        color: Hexcolor('#B2EC80'),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.vertical(
-                            top: Radius.circular(10.0),
-                            bottom: Radius.circular(10.0),
+                      child: InkWell(
+                        child: Card(
+                          color: Hexcolor('#B2EC80'),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(10.0),
+                              bottom: Radius.circular(10.0),
+                            ),
+                          ),
+                          margin: EdgeInsets.symmetric(
+                              vertical: 10.0, horizontal: 10.0),
+                          child: Center(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Container(
+                                  height: 50,
+                                  width: 50,
+                                  child: Image.asset("images/fossils.png"),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    "Fossils",
+                                    style: TextStyle(
+                                        fontFamily: 'OpenSans',
+                                        color: Hexcolor('#21697A')),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
-                        margin: EdgeInsets.symmetric(
-                            vertical: 10.0, horizontal: 10.0),
-                        child: Center(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Container(
-                                height: 50,
-                                width: 50,
-                                child: Image.asset("images/fossils.png"),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  "Fossils",
-                                  style: TextStyle(
-                                      fontFamily: 'OpenSans',
-                                      color: Hexcolor('#21697A')),
-                                ),
-                              ),
-                            ],
-                          ),
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Fossils()),
                         ),
                       ),
                     ),
                     Container(
                       height: 150,
                       width: 150,
-                      child: Card(
-                        color: Hexcolor('#B2EC80'),
-                        shape: RoundedRectangleBorder(
-                          borderRadius: BorderRadius.vertical(
-                            top: Radius.circular(10.0),
-                            bottom: Radius.circular(10.0),
+                      child: InkWell(
+                        child: Card(
+                          color: Hexcolor('#B2EC80'),
+                          shape: RoundedRectangleBorder(
+                            borderRadius: BorderRadius.vertical(
+                              top: Radius.circular(10.0),
+                              bottom: Radius.circular(10.0),
+                            ),
+                          ),
+                          margin: EdgeInsets.symmetric(
+                              vertical: 10.0, horizontal: 10.0),
+                          child: Center(
+                            child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.center,
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: <Widget>[
+                                Container(
+                                  height: 50,
+                                  width: 50,
+                                  child: Image.asset("images/water.png"),
+                                ),
+                                Padding(
+                                  padding: const EdgeInsets.all(8.0),
+                                  child: Text(
+                                    "Water",
+                                    style: TextStyle(
+                                        fontFamily: 'OpenSans',
+                                        color: Hexcolor('#21697A')),
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         ),
-                        margin: EdgeInsets.symmetric(
-                            vertical: 10.0, horizontal: 10.0),
-                        child: Center(
-                          child: Column(
-                            crossAxisAlignment: CrossAxisAlignment.center,
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: <Widget>[
-                              Container(
-                                height: 50,
-                                width: 50,
-                                child: Image.asset("images/water.png"),
-                              ),
-                              Padding(
-                                padding: const EdgeInsets.all(8.0),
-                                child: Text(
-                                  "Water",
-                                  style: TextStyle(
-                                      fontFamily: 'OpenSans',
-                                      color: Hexcolor('#21697A')),
-                                ),
-                              ),
-                            ],
-                          ),
+                        onTap: () => Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Water()),
                         ),
                       ),
                     ),
