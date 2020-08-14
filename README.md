@@ -16,4 +16,4 @@ For help getting started with Flutter, view our
 samples, guidance on mobile development, and a full API reference.
 
 ## Screenshots
-<img src= "screenshots/home.png" width="414" height="896" >   <img src= "screenshots/earth.png" width="414" height="896" >   <img src= "screenshots/water.png" width="414" height="896" >   <img src= "screenshots/energy.png" width="414" height="896" > 
+<img src= "screenshots/home.png" width="360" height="720" >   <img src= "screenshots/earth.png" width="360" height="720" >   <img src= "screenshots/water.png" width="360" height="720" >   <img src= "screenshots/energy.png" width="360" height="720" > 
