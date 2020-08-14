@@ -66,14 +66,37 @@ class _WaterState extends State<Water> {
                     ),
                   ),
                 ),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Card(
+                    color: Hexcolor('#FFE4DF'),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.vertical(
+                        top: Radius.circular(25.0),
+                        bottom: Radius.circular(25.0),
+                      ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(20.0),
+                      child: Text(
+                        "Add the number of times you have drank water today.",
+                        style: TextStyle(
+                          fontFamily: 'OpenSans',
+                          fontSize: 15,
+                          color: Hexcolor('#176BBF'),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     ClipOval(
                       child: Material(
-                        color: Hexcolor('#2769C6'),
+                        color: Hexcolor('#FF8981'),
                         child: InkWell(
-                          splashColor: Hexcolor('#FF774F'),
+                          splashColor: Hexcolor('#FFE9D0F'),
                           child: SizedBox(
                               width: 56,
                               height: 56,
@@ -100,9 +123,9 @@ class _WaterState extends State<Water> {
                     ),
                     ClipOval(
                       child: Material(
-                        color: Hexcolor('#2769C6'),
+                        color: Hexcolor('#FF8981'),
                         child: InkWell(
-                          splashColor: Hexcolor('#FF774F'),
+                          splashColor: Hexcolor('#FFE9D0'),
                           child: SizedBox(
                               width: 56,
                               height: 56,
