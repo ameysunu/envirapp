@@ -11,10 +11,12 @@ class _WaterState extends State<Water> {
   void _increment(BuildContext context) {
     AchievementView(
       context,
-      title: 'Wooho!',
-      subTitle: 'You have drunk enough glasses of water for the day!',
-      textStyleTitle: TextStyle(fontFamily: 'OpenSans'),
-      textStyleSubTitle: TextStyle(fontFamily: 'OpenSans'),
+      title: 'Woohooo!',
+      subTitle: 'You are perfectly hydrated for the day!',
+      textStyleTitle:
+          TextStyle(fontFamily: 'OpenSans', color: Hexcolor('#FFFFFF')),
+      textStyleSubTitle:
+          TextStyle(fontFamily: 'OpenSans', color: Hexcolor('#FFFFFF')),
       icon: Icon(
         Icons.local_drink,
         color: Colors.white,
