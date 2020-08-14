@@ -17,14 +17,28 @@ class _AnimalsState extends State<Animals> {
           child: SafeArea(
             child: Column(
               children: <Widget>[
-                Center(
-                  child: Container(
-                    child: Text(
-                      "Animals",
-                      style: TextStyle(
-                          color: Hexcolor("#FFFFFF"),
-                          fontFamily: 'OpenSans',
-                          fontSize: 35.0),
+                Padding(
+                  padding: const EdgeInsets.all(10.0),
+                  child: Card(
+                    color: Hexcolor('#FFE4DF'),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.vertical(
+                        top: Radius.circular(25.0),
+                        bottom: Radius.circular(25.0),
+                      ),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.all(15.0),
+                      child: Center(
+                        child: Text(
+                          "Animals",
+                          style: TextStyle(
+                            fontFamily: 'OpenSans',
+                            color: Hexcolor('#FF6B69'),
+                            fontSize: 30,
+                          ),
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -68,7 +82,7 @@ class _AnimalsState extends State<Animals> {
                           Padding(
                             padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
                             child: Text(
-                              'Over the last century, tiger habitats have fallen by around 95 percent, and there are now fewer than 4,000 tigers alive in the wild, reports the World Wildlife Federation (WWF). Of the nine subspecies of tiger, three are already extinct; and the rest are considered endangered.',
+                              'Over the last century, tiger habitats have fallen by around 95 percent, and there are now fewer than 4,000 tigers alive in the wild, reports the World Wildlife Federation (WWF).',
                               style: TextStyle(
                                   fontFamily: 'OpenSans',
                                   fontSize: 16,
