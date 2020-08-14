@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:achievement_view/achievement_view.dart';
 
 class Water extends StatefulWidget {
   @override
@@ -7,17 +8,39 @@ class Water extends StatefulWidget {
 }
 
 class _WaterState extends State<Water> {
+  void _increment(BuildContext context) {
+    AchievementView(
+      context,
+      title: 'Wooho!',
+      subTitle: 'You have drunk enough glasses of water for the day!',
+      textStyleTitle: TextStyle(fontFamily: 'OpenSans'),
+      textStyleSubTitle: TextStyle(fontFamily: 'OpenSans'),
+      icon: Icon(
+        Icons.local_drink,
+        color: Colors.white,
+      ),
+      borderRadius: 5.0,
+      color: Hexcolor('#D0B9BD'),
+    )..show();
+  }
+
   @override
   int counter = 0;
   void incrementCounter() {
     setState(() {
       counter++;
+      if (counter == 8) {
+        _increment(context);
+      }
     });
   }
 
   void decrementCounter() {
     setState(() {
       counter--;
+      if (counter == 8) {
+        _increment(context);
+      }
     });
   }
 

@@ -65,9 +65,9 @@ class _EnergyState extends State<Energy> {
                   children: <Widget>[
                     ClipOval(
                       child: Material(
-                        color: Hexcolor('#2769C6'), // button color
+                        color: Hexcolor('#2769C6'),
                         child: InkWell(
-                          splashColor: Hexcolor('#FF774F'), // inkwell color
+                          splashColor: Hexcolor('#FF774F'),
                           child: SizedBox(
                               width: 56,
                               height: 56,

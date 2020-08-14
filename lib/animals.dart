@@ -149,7 +149,7 @@ class _AnimalsState extends State<Animals> {
                       ),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ),
