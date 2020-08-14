@@ -1,6 +1,6 @@
 # Envirapp
 
-A new Flutter project.
+An app that helps people understand how vital environment is and helps spread voice about how, we as humans are not conserving our resources.
 
 ## Getting Started
 
@@ -14,3 +14,6 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter, view our
 [online documentation](https://flutter.dev/docs), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+## Screenshots
+<img src= "screenshots/home.png" width="414" height="896" >   <img src= "screenshots/earth.png" width="414" height="896" >   <img src= "screenshots/water.png" width="414" height="896" >   <img src= "screenshots/energy.png" width="414" height="896" > 
