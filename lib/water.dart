@@ -8,6 +8,19 @@ class Water extends StatefulWidget {
 
 class _WaterState extends State<Water> {
   @override
+  int counter = 0;
+  void incrementCounter() {
+    setState(() {
+      counter++;
+    });
+  }
+
+  void decrementCounter() {
+    setState(() {
+      counter--;
+    });
+  }
+
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -52,6 +65,58 @@ class _WaterState extends State<Water> {
                       fontSize: 20,
                     ),
                   ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    ClipOval(
+                      child: Material(
+                        color: Hexcolor('#2769C6'),
+                        child: InkWell(
+                          splashColor: Hexcolor('#FF774F'),
+                          child: SizedBox(
+                              width: 56,
+                              height: 56,
+                              child: Icon(
+                                Icons.remove,
+                                color: Colors.white,
+                              )),
+                          onTap: () {
+                            decrementCounter();
+                          },
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                      child: Text(
+                        '$counter',
+                        style: TextStyle(
+                          fontFamily: 'OpenSans',
+                          fontSize: 30,
+                          color: Hexcolor('#2F4858'),
+                        ),
+                      ),
+                    ),
+                    ClipOval(
+                      child: Material(
+                        color: Hexcolor('#2769C6'),
+                        child: InkWell(
+                          splashColor: Hexcolor('#FF774F'),
+                          child: SizedBox(
+                              width: 56,
+                              height: 56,
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              )),
+                          onTap: () {
+                            incrementCounter();
+                          },
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),
