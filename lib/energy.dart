@@ -27,7 +27,7 @@ class _EnergyState extends State<Energy> {
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Card(
-                    color: Hexcolor('#2769C6'),
+                    color: Hexcolor('#495780'),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.vertical(
                         top: Radius.circular(25.0),
@@ -95,9 +95,9 @@ class _EnergyState extends State<Energy> {
                   ],
                 ),
                 Padding(
-                  padding: const EdgeInsets.all(10.0),
+                  padding: const EdgeInsets.fromLTRB(10.0, 20, 10, 0),
                   child: Card(
-                    color: Hexcolor('#F95A7B'),
+                    color: Hexcolor('#936AC8'),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.vertical(
                         top: Radius.circular(25.0),
@@ -105,14 +105,26 @@ class _EnergyState extends State<Energy> {
                       ),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Text(
-                        "By supporting organizations like PETA, WWF and World Animal Protection, you are not just helping to change one life, but many more. Animals belong to their habitats just like humans belong to theirs. Let's not invade their space and also by donating, you are supporting the cause.",
-                        style: TextStyle(
-                          fontFamily: 'OpenSans',
-                          fontSize: 15,
-                          color: Hexcolor('#FFFFFF'),
-                        ),
+                      padding: const EdgeInsets.all(8.0),
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            height: 100,
+                            width: 100,
+                            child: Image.asset('images/energystar.png'),
+                          ),
+                          Padding(
+                            padding: const EdgeInsets.all(20.0),
+                            child: Text(
+                              "Energy Star is a program run by the U.S. Environmental Protection Agency (EPA) and U.S. Department of Energy (DOE) that promotes energy efficiency.The program provides information on the energy consumption of products and devices using different standardized methods. The Energy Star label is found on more than 75 different certified product categories, homes, commercial buildings, and industrial plants.",
+                              style: TextStyle(
+                                fontFamily: 'OpenSans',
+                                fontSize: 15,
+                                color: Hexcolor('#FFFFFF'),
+                              ),
+                            ),
+                          ),
+                        ],
                       ),
                     ),
                   ),
