@@ -70,7 +70,7 @@ class _AnimalsState extends State<Animals> {
                                 ),
                               ),
                               Text(
-                                "Helluuu, I'm a tiger! We are getting\nextinct with time. Save our families!",
+                                "Helluuu, I'm a tiger!\nSave me before I disappear!",
                                 style: TextStyle(
                                   fontFamily: 'OpenSans',
                                   fontSize: 15,
