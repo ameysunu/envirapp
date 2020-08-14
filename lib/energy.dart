@@ -97,32 +97,7 @@ class _EnergyState extends State<Energy> {
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Card(
-                    color: Hexcolor('#176BBF'),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.vertical(
-                        top: Radius.circular(25.0),
-                        bottom: Radius.circular(25.0),
-                      ),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Center(
-                        child: Text(
-                          "How can you help?",
-                          style: TextStyle(
-                            fontFamily: 'OpenSans',
-                            color: Colors.white,
-                            fontSize: 25,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-                Padding(
-                  padding: const EdgeInsets.all(10.0),
-                  child: Card(
-                    color: Hexcolor('#FFE4DF'),
+                    color: Hexcolor('#F95A7B'),
                     shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.vertical(
                         top: Radius.circular(25.0),
@@ -136,7 +111,7 @@ class _EnergyState extends State<Energy> {
                         style: TextStyle(
                           fontFamily: 'OpenSans',
                           fontSize: 15,
-                          color: Hexcolor('#176BBF'),
+                          color: Hexcolor('#FFFFFF'),
                         ),
                       ),
                     ),
