@@ -8,6 +8,13 @@ class Energy extends StatefulWidget {
 
 class _EnergyState extends State<Energy> {
   @override
+  int counter = 0;
+  void incrementCounter() {
+    setState(() {
+      counter++;
+    });
+  }
+
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -45,13 +52,47 @@ class _EnergyState extends State<Energy> {
                 Padding(
                   padding: const EdgeInsets.all(10.0),
                   child: Text(
-                    "Energy is an important source of energy. You need energy to run mobile phones, laptops, home appliances and literally anything electrical.\nClick on the button for everytime, you use an electrical product and you'll see how important energy is",
+                    "Energy is an important source of energy. You need energy to run mobile phones, laptops, home appliances and literally anything electrical.\nClick on the button for everytime, you use an electrical product and you'll see how important energy is.",
                     style: TextStyle(
                       fontFamily: 'OpenSans',
                       color: Colors.white,
                       fontSize: 20,
                     ),
                   ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    ClipOval(
+                      child: Material(
+                        color: Hexcolor('#2769C6'), // button color
+                        child: InkWell(
+                          splashColor: Hexcolor('#FF774F'), // inkwell color
+                          child: SizedBox(
+                              width: 56,
+                              height: 56,
+                              child: Icon(
+                                Icons.power,
+                                color: Colors.white,
+                              )),
+                          onTap: () {
+                            incrementCounter();
+                          },
+                        ),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                      child: Text(
+                        '$counter',
+                        style: TextStyle(
+                          fontFamily: 'OpenSans',
+                          fontSize: 30,
+                          color: Hexcolor('#CFF6FF'),
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
