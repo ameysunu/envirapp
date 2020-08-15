@@ -8,6 +8,19 @@ class Calculate extends StatefulWidget {
 
 class _CalculateState extends State<Calculate> {
   @override
+  int counter = 0;
+  void incrementCounter() {
+    setState(() {
+      counter++;
+    });
+  }
+
+  void decrementCounter() {
+    setState(() {
+      counter--;
+    });
+  }
+
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
@@ -51,6 +64,52 @@ class _CalculateState extends State<Calculate> {
                         fontSize: 15,
                         color: Colors.white60),
                   ),
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: <Widget>[
+                    ClipOval(
+                      child: Material(
+                        color: Hexcolor('#FF8981'),
+                        child: SizedBox(
+                            width: 56,
+                            height: 56,
+                            child: Icon(
+                              Icons.remove,
+                              color: Colors.white,
+                            )),
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
+                      child: Text(
+                        '$counter',
+                        style: TextStyle(
+                          fontFamily: 'OpenSans',
+                          fontSize: 30,
+                          color: Hexcolor('#2F4858'),
+                        ),
+                      ),
+                    ),
+                    ClipOval(
+                      child: Material(
+                        color: Hexcolor('#FF8981'),
+                        child: InkWell(
+                          splashColor: Hexcolor('#FFE9D0'),
+                          child: SizedBox(
+                              width: 56,
+                              height: 56,
+                              child: Icon(
+                                Icons.add,
+                                color: Colors.white,
+                              )),
+                          onTap: () {
+                            incrementCounter();
+                          },
+                        ),
+                      ),
+                    ),
+                  ],
                 ),
               ],
             ),

@@ -121,24 +121,13 @@ class _WaterState extends State<Water> {
                     ClipOval(
                       child: Material(
                         color: Hexcolor('#FF8981'),
-                        child: InkWell(
-                          splashColor: Hexcolor('#FFE9D0F'),
-                          child: SizedBox(
-                              width: 56,
-                              height: 56,
-                              child: Icon(
-                                Icons.remove,
-                                color: Colors.white,
-                              )),
-                          onTap: () async {
-                            const url = 'https://www.watercalculator.org/';
-                            if (await canLaunch(url)) {
-                              await launch(url);
-                            } else {
-                              throw 'Could not launch $url';
-                            }
-                          },
-                        ),
+                        child: SizedBox(
+                            width: 56,
+                            height: 56,
+                            child: Icon(
+                              Icons.remove,
+                              color: Colors.white,
+                            )),
                       ),
                     ),
                     Padding(
