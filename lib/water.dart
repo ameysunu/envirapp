@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:achievement_view/achievement_view.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Water extends StatefulWidget {
   @override
@@ -129,8 +130,13 @@ class _WaterState extends State<Water> {
                                 Icons.remove,
                                 color: Colors.white,
                               )),
-                          onTap: () {
-                            decrementCounter();
+                          onTap: () async {
+                            const url = 'https://www.watercalculator.org/';
+                            if (await canLaunch(url)) {
+                              await launch(url);
+                            } else {
+                              throw 'Could not launch $url';
+                            }
                           },
                         ),
                       ),
@@ -168,25 +174,28 @@ class _WaterState extends State<Water> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
-                  child: Card(
-                    color: Hexcolor('#FFC1B6'),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.vertical(
-                        top: Radius.circular(25.0),
-                        bottom: Radius.circular(25.0),
+                  child: InkWell(
+                    child: Card(
+                      color: Hexcolor('#FFC1B6'),
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.vertical(
+                          top: Radius.circular(25.0),
+                          bottom: Radius.circular(25.0),
+                        ),
                       ),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(20.0),
-                      child: Text(
-                        "Hustle all what you want, but we all know how important water is, for all our basic needs from showering to drinking, we need water to survive. So why not save it? There is only 0.4% of fresh water available in the world. 0.4% for 7 billion people. Tap here to know more about water savings!",
-                        style: TextStyle(
-                          fontFamily: 'OpenSans',
-                          fontSize: 15,
-                          color: Hexcolor('#176BBF'),
+                      child: Padding(
+                        padding: const EdgeInsets.all(20.0),
+                        child: Text(
+                          "Hustle all what you want, but we all know how important water is, for all our basic needs from showering to drinking, we need water to survive. So why not save it? There is only 0.4% of fresh water available in the world. 0.4% for 7 billion people. Tap here to know more about water savings!",
+                          style: TextStyle(
+                            fontFamily: 'OpenSans',
+                            fontSize: 15,
+                            color: Hexcolor('#176BBF'),
+                          ),
                         ),
                       ),
                     ),
+                    onTap: () {},
                   ),
                 ),
               ],
