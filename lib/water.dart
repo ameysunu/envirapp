@@ -185,7 +185,7 @@ class _WaterState extends State<Water> {
                       ),
                     ),
                     onTap: () async {
-                      const url = 'https://www.watercalculator.org/';
+                      const url = 'https://conserves.co/';
                       if (await canLaunch(url)) {
                         await launch(url);
                       } else {
