@@ -118,18 +118,22 @@ class _WaterState extends State<Water> {
                 Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
-                    ClipOval(
-                      child: Material(
-                        color: Hexcolor('#FF8981'),
-                        child: SizedBox(
-                            width: 56,
-                            height: 56,
-                            child: Icon(
-                              Icons.remove,
-                              color: Colors.white,
-                            )),
-                      ),
-                    ),
+                    InkWell(
+                        child: ClipOval(
+                          child: Material(
+                            color: Hexcolor('#FF8981'),
+                            child: SizedBox(
+                                width: 56,
+                                height: 56,
+                                child: Icon(
+                                  Icons.remove,
+                                  color: Colors.white,
+                                )),
+                          ),
+                        ),
+                        onTap: () {
+                          decrementCounter();
+                        }),
                     Padding(
                       padding: const EdgeInsets.fromLTRB(20, 0, 20, 0),
                       child: Text(
