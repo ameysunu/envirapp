@@ -6,7 +6,6 @@ import 'earth.dart';
 import 'energy.dart';
 import 'fossils.dart';
 import 'water.dart';
-import 'calculate.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -457,10 +456,14 @@ class _HomeState extends State<Home> {
                         ),
                       ],
                     ),
-                    onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(builder: (context) => Calculate()),
-                    ),
+                    onTap: () async {
+                      const url = 'https://www.watercalculator.org';
+                      if (await canLaunch(url)) {
+                        await launch(url);
+                      } else {
+                        throw 'Could not launch $url';
+                      }
+                    },
                   ),
                 ),
               ],

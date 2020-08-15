@@ -184,7 +184,14 @@ class _WaterState extends State<Water> {
                         ),
                       ),
                     ),
-                    onTap: () {},
+                    onTap: () async {
+                      const url = 'https://www.watercalculator.org/';
+                      if (await canLaunch(url)) {
+                        await launch(url);
+                      } else {
+                        throw 'Could not launch $url';
+                      }
+                    },
                   ),
                 ),
               ],
