@@ -433,7 +433,7 @@ class _HomeState extends State<Home> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: <Widget>[
                                 Text(
-                                  'Water Footprint Calculator',
+                                  'About Developer',
                                   style: TextStyle(
                                       fontFamily: 'OpenSans',
                                       fontSize: 24.0,
@@ -443,7 +443,7 @@ class _HomeState extends State<Home> {
                                   padding:
                                       const EdgeInsets.fromLTRB(0, 5, 0, 0),
                                   child: Text(
-                                    'Calculate how much water footprint you cause.',
+                                    'Learn about the app developer(s) and contributions.',
                                     style: TextStyle(
                                         fontFamily: 'OpenSans',
                                         fontSize: 15.0,
