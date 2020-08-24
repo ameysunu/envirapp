@@ -6,6 +6,7 @@ import 'earth.dart';
 import 'energy.dart';
 import 'fossils.dart';
 import 'water.dart';
+import 'developer.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -422,49 +423,46 @@ class _HomeState extends State<Home> {
                   margin:
                       EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
                   child: InkWell(
-                    child: Column(
-                      children: <Widget>[
-                        Padding(
-                          padding: EdgeInsets.fromLTRB(20, 20, 20, 5),
-                          child: SizedBox(
-                            width: double.infinity,
-                            height: 100,
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  'About Developer',
-                                  style: TextStyle(
-                                      fontFamily: 'OpenSans',
-                                      fontSize: 24.0,
-                                      color: Hexcolor('#FFFFFF')),
-                                ),
-                                Padding(
-                                  padding:
-                                      const EdgeInsets.fromLTRB(0, 5, 0, 0),
-                                  child: Text(
-                                    'Learn about the app developer(s) and contributions.',
+                      child: Column(
+                        children: <Widget>[
+                          Padding(
+                            padding: EdgeInsets.fromLTRB(20, 20, 20, 5),
+                            child: SizedBox(
+                              width: double.infinity,
+                              height: 100,
+                              child: Column(
+                                crossAxisAlignment: CrossAxisAlignment.start,
+                                children: <Widget>[
+                                  Text(
+                                    'About Developer',
                                     style: TextStyle(
                                         fontFamily: 'OpenSans',
-                                        fontSize: 15.0,
+                                        fontSize: 24.0,
                                         color: Hexcolor('#FFFFFF')),
                                   ),
-                                ),
-                              ],
+                                  Padding(
+                                    padding:
+                                        const EdgeInsets.fromLTRB(0, 5, 0, 0),
+                                    child: Text(
+                                      'A little note from the developer.',
+                                      style: TextStyle(
+                                          fontFamily: 'OpenSans',
+                                          fontSize: 15.0,
+                                          color: Hexcolor('#FFFFFF')),
+                                    ),
+                                  ),
+                                ],
+                              ),
                             ),
                           ),
-                        ),
-                      ],
-                    ),
-                    onTap: () async {
-                      const url = 'https://www.watercalculator.org';
-                      if (await canLaunch(url)) {
-                        await launch(url);
-                      } else {
-                        throw 'Could not launch $url';
-                      }
-                    },
-                  ),
+                        ],
+                      ),
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => Developer()),
+                        );
+                      }),
                 ),
               ],
             ),
