@@ -3,6 +3,7 @@
 
 An app that helps people understand how vital environment is and helps spread voice about how, we as humans are not conserving our resources.<br> <br>
 [![Codemagic build status](https://api.codemagic.io/apps/5f36e976177fb1001d5baa0e/5f36e976177fb1001d5baa0d/status_badge.svg)](https://codemagic.io/apps/5f36e976177fb1001d5baa0e/5f36e976177fb1001d5baa0d/latest_build)
+[![GitHub stars](https://img.shields.io/github/stars/ameysunu/envirapp?logo=github)](https://github.com/ameysunu/envirapp/stargazers)
 
 ## Getting Started
 
