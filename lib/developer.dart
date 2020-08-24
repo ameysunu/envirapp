@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Developer extends StatefulWidget {
   @override
@@ -51,17 +52,91 @@ class _DeveloperState extends State<Developer> {
                     ),
                   ),
                 ),
-                // Padding(
-                //   padding: const EdgeInsets.fromLTRB(20, 15, 15, 0),
-                //   child: Text(
-                //     "I hope this apps helps y'all negroes",
-                //     style: TextStyle(
-                //       color: Hexcolor('#B2EC80'),
-                //       fontFamily: 'OpenSans',
-                //       fontSize: 20,
-                //     ),
-                //   ),
-                // ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: RaisedButton(
+                    color: Colors.white,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                          child: Container(
+                              height: 30,
+                              width: 30,
+                              child: Image.asset('images/github.png')),
+                        ),
+                        Text(
+                          "Check me out on GitHub!",
+                          style: TextStyle(
+                              color: Colors.black,
+                              fontFamily: 'OpenSans',
+                              fontSize: 15),
+                        ),
+                      ],
+                    ),
+                    onPressed: () async {
+                      const url = 'https://www.github.com/ameysunu';
+                      if (await canLaunch(url)) {
+                        await launch(url);
+                      } else {
+                        throw 'Could not launch $url';
+                      }
+                    },
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 15, 15, 0),
+                  child: Text(
+                    "I make open source projects, free for all developers to refer and make maximum use of whatever they do. I would really appreciate if you supported me as well :)",
+                    style: TextStyle(
+                      color: Hexcolor('#B2EC80'),
+                      fontFamily: 'OpenSans',
+                      fontSize: 20,
+                    ),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(20, 20, 20, 20),
+                  child: RaisedButton(
+                    color: Hexcolor('#FF813F'),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(0, 10, 20, 10),
+                          child: Container(
+                              height: 30,
+                              width: 30,
+                              child: Image.asset('images/coffee.png')),
+                        ),
+                        Text(
+                          "Buy me a coffee!",
+                          style: TextStyle(
+                              color: Colors.white,
+                              fontFamily: 'Cookie',
+                              fontSize: 25),
+                        ),
+                      ],
+                    ),
+                    onPressed: () async {
+                      const url = 'https://www.buymeacoffee.com/amey';
+                      if (await canLaunch(url)) {
+                        await launch(url);
+                      } else {
+                        throw 'Could not launch $url';
+                      }
+                    },
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Text(
+                    "Made with ❤️ by Amey",
+                    style:
+                        TextStyle(fontFamily: 'OpenSans', color: Colors.white),
+                  ),
+                )
               ],
             ),
           ),
