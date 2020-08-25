@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:share/share.dart';
 
 class Developer extends StatefulWidget {
   @override
@@ -8,6 +9,10 @@ class Developer extends StatefulWidget {
 }
 
 class _DeveloperState extends State<Developer> {
+  void shareIt() {
+    Share.share('https://github.com/ameysunu/envirapp', subject: 'Envirapp');
+  }
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -140,6 +145,16 @@ class _DeveloperState extends State<Developer> {
               ],
             ),
           ),
+        ),
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Hexcolor('#B2EC80'),
+          child: Icon(
+            Icons.share,
+            color: Hexcolor('#0094AC'),
+          ),
+          onPressed: () {
+            shareIt();
+          },
         ),
       ),
     );
