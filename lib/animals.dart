@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:hexcolor/hexcolor.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Animals extends StatefulWidget {
   @override
@@ -42,68 +43,80 @@ class _AnimalsState extends State<Animals> {
                     ),
                   ),
                 ),
-                Card(
-                  color: Hexcolor('#C35CAF'),
-                  shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.vertical(
-                      top: Radius.circular(25.0),
-                      bottom: Radius.circular(25.0),
+                InkWell(
+                  child: Card(
+                    color: Hexcolor('#C35CAF'),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.vertical(
+                        top: Radius.circular(25.0),
+                        bottom: Radius.circular(25.0),
+                      ),
                     ),
-                  ),
-                  margin:
-                      EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-                  child: SizedBox(
-                    height: 340.0,
-                    width: double.infinity,
-                    child: Container(
-                      child: Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          Row(
-                            children: <Widget>[
-                              Padding(
-                                padding: EdgeInsets.fromLTRB(20, 10, 0, 0),
-                                child: SizedBox(
-                                  height: 100,
-                                  width: 100,
-                                  child: Image.asset("images/animals.png"),
+                    margin:
+                        EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
+                    child: SizedBox(
+                      height: 340.0,
+                      width: double.infinity,
+                      child: Container(
+                        height: MediaQuery.of(context).size.height * 0.7,
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: <Widget>[
+                            Row(
+                              children: <Widget>[
+                                Padding(
+                                  padding: EdgeInsets.fromLTRB(20, 10, 0, 0),
+                                  child: SizedBox(
+                                    height: 100,
+                                    width: 100,
+                                    child: Image.asset("images/animals.png"),
+                                  ),
                                 ),
-                              ),
-                              Text(
-                                "Helluuu, I'm a tiger!\nSave me before I disappear!",
+                                Text(
+                                  "Helluuu, I'm a tiger!\nSave me before I disappear!",
+                                  style: TextStyle(
+                                    fontFamily: 'OpenSans',
+                                    fontSize: 15,
+                                    color: Colors.white70,
+                                  ),
+                                ),
+                              ],
+                            ),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
+                              child: Text(
+                                'Over the last century, tiger habitats have fallen by around 95 percent, and there are now fewer than 4,000 tigers alive in the wild, reports the World Wildlife Federation (WWF).',
                                 style: TextStyle(
-                                  fontFamily: 'OpenSans',
-                                  fontSize: 15,
-                                  color: Colors.white70,
-                                ),
+                                    fontFamily: 'OpenSans',
+                                    fontSize: 16,
+                                    color: Colors.white),
                               ),
-                            ],
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(20, 10, 20, 0),
-                            child: Text(
-                              'Over the last century, tiger habitats have fallen by around 95 percent, and there are now fewer than 4,000 tigers alive in the wild, reports the World Wildlife Federation (WWF).',
-                              style: TextStyle(
-                                  fontFamily: 'OpenSans',
-                                  fontSize: 16,
-                                  color: Colors.white),
                             ),
-                          ),
-                          Padding(
-                            padding: EdgeInsets.fromLTRB(20, 10, 0, 0),
-                            child: Text(
-                              'Source: Reader\'s digest.',
-                              style: TextStyle(
-                                  fontFamily: 'OpenSans',
-                                  fontStyle: FontStyle.italic,
-                                  fontSize: 13.0,
-                                  color: Colors.white70),
+                            Padding(
+                              padding: EdgeInsets.fromLTRB(20, 10, 0, 0),
+                              child: Text(
+                                'Source: Reader\'s digest.',
+                                style: TextStyle(
+                                    fontFamily: 'OpenSans',
+                                    fontStyle: FontStyle.italic,
+                                    fontSize: 13.0,
+                                    color: Colors.white70),
+                              ),
                             ),
-                          ),
-                        ],
+                          ],
+                        ),
                       ),
                     ),
                   ),
+                  onTap: () async {
+                    const url =
+                        "https://www.rd.com/list/endangered-tigers/#:~:text=All%20tigers%20are%20in%20danger,the%20rest%20are%20considered%20endangered.";
+                    if (await canLaunch(url)) {
+                      await launch(url);
+                    } else {
+                      throw 'Could not launch $url';
+                    }
+                  },
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),
